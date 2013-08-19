@@ -1,8 +1,9 @@
 package com.solutions.notetaker;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Note {
+public class Note implements Serializable{
 	public Note(String title, String note, Date date) {
 		super();
 		this.title = title;

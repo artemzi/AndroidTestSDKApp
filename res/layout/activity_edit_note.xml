@@ -6,16 +6,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".EditNoteActivity" >
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="@string/save" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_above="@+id/saveButton"
+        android:layout_centerHorizontal="true"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:baselineAligned="false">
+            android:layout_height="wrap_content"
+            android:baselineAligned="false" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -33,11 +45,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" android:inputType="">
-
-                    <requestFocus />
-                </EditText>
-
+                    android:ems="10" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,17 +66,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/_"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
-
             </LinearLayout>
-
         </LinearLayout>
 
         <TextView
             android:id="@+id/noteTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:inputType="none"
             android:text="@string/notes_"
-            android:textAppearance="?android:attr/textAppearanceLarge" android:inputType="none"/>
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
             android:id="@+id/noteEditText"
@@ -77,15 +84,15 @@
             android:layout_weight="0.27"
             android:ems="10"
             android:inputType="text" />
-
     </LinearLayout>
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:text="@string/save" />
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginRight="52dp"
+        android:layout_toLeftOf="@+id/saveButton"
+        android:text="@string/cancel" />
 
 </RelativeLayout>
