@@ -24,20 +24,23 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080007;
-        public static final int dateTextView=0x7f080002;
-        public static final int dateValueTextView=0x7f080003;
-        public static final int noteEditText=0x7f080005;
-        public static final int noteTextView=0x7f080004;
-        public static final int saveButton=0x7f080006;
-        public static final int titleEditText=0x7f080001;
-        public static final int titleTextView=0x7f080000;
+        public static final int action_settings=0x7f080008;
+        public static final int dateTextView=0x7f080003;
+        public static final int dateValueTextView=0x7f080004;
+        public static final int noteEditText=0x7f080006;
+        public static final int noteTextView=0x7f080005;
+        public static final int noteslistView=0x7f080000;
+        public static final int saveButton=0x7f080007;
+        public static final int titleEditText=0x7f080002;
+        public static final int titleTextView=0x7f080001;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_list_notes=0x7f030000;
+        public static final int activity_main=0x7f030001;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int list_notes=0x7f070000;
+        public static final int main=0x7f070001;
     }
     public static final class string {
         public static final int _=0x7f050007;
@@ -48,6 +51,7 @@ public final class R {
         public static final int notes_=0x7f050005;
         public static final int save=0x7f050006;
         public static final int title_=0x7f050003;
+        public static final int title_activity_list_notes=0x7f050008;
     }
     public static final class style {
         /** 

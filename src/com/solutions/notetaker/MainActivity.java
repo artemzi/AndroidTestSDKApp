@@ -17,7 +17,8 @@ public class MainActivity extends Activity {
 	
 	private boolean isInEditMode = true;
 
-    @SuppressLint("SimpleDateFormat") @Override
+    @SuppressLint("SimpleDateFormat")
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
