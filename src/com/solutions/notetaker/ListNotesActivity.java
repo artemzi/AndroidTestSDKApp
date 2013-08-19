@@ -26,19 +26,7 @@ public class ListNotesActivity extends Activity {
 		notes.add(new Note("Fourth note", "Bla blah", new Date()));
 		notes.add(new Note("Fifth note", "Bla blah", new Date()));
 
-		ListView notesListView = (ListView)findViewById(R.id.noteslistView);
-		
-		List<String> values = new ArrayList<String>();
-		
-		for(Note note : notes)
-		{
-			values.add(note.getTitle());
-		}
-		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1,
-				values);
-		
-		notesListView.setAdapter(adapter);
+		populateList();
 	}
 
 	@Override
@@ -51,6 +39,12 @@ public class ListNotesActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		notes.add(new Note("Added note", "Blah", new Date()));
+		populateList();
+		
+		return true;
+	}
+
+	private void populateList() {
 		ListView notesListView = (ListView)findViewById(R.id.noteslistView);
 		List<String> values = new ArrayList<String>();
 				
@@ -63,8 +57,6 @@ public class ListNotesActivity extends Activity {
 				values);
 		
 		notesListView.setAdapter(adapter);
-		
-		return true;
 	}
 	
 }
