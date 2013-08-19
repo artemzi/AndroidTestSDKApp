@@ -24,7 +24,8 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f080009;
+        public static final int addNoteItem=0x7f080008;
         public static final int dateTextView=0x7f080003;
         public static final int dateValueTextView=0x7f080004;
         public static final int noteEditText=0x7f080006;
@@ -45,6 +46,7 @@ public final class R {
     public static final class string {
         public static final int _=0x7f050007;
         public static final int action_settings=0x7f050001;
+        public static final int add_note=0x7f050009;
         public static final int app_name=0x7f050000;
         public static final int date_=0x7f050004;
         public static final int hello_world=0x7f050002;
