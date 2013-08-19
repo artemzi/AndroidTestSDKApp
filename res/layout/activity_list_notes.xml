@@ -9,13 +9,11 @@
     tools:context=".ListNotesActivity" >
 
     <ListView
-        android:id="@+id/noteslistView"
+        android:id="@+id/notesListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="78dp" >
-
+        android:layout_centerVertical="true" >
     </ListView>
 
 </RelativeLayout>
