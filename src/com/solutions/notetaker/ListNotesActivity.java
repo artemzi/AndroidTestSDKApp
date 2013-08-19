@@ -20,17 +20,31 @@ public class ListNotesActivity extends Activity {
 	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if(resultCode == RESULT_CANCELED)
+		{
+			return;
+		}
+		
 		Serializable extra = data.getSerializableExtra("Note");
 		if(extra != null)
 		{
 			Note newNote = (Note)extra;
-			notes.add(newNote);
+			if(editingNoteId > -1)
+			{
+				notes.set(editingNoteId, newNote);
+				editingNoteId = -1;
+			}
+			else
+			{
+				notes.add(newNote);
+			}
 			populateList();
 		}
 	}
 
 	private List<Note> notes = new ArrayList<Note>();
 	private ListView notesListView;
+	private int editingNoteId = -1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +59,7 @@ public class ListNotesActivity extends Activity {
 					long id) {
 				 Intent editNoteIntent = new Intent(view.getContext(), EditNoteActivity.class);
 				 editNoteIntent.putExtra("Note", notes.get(itemNumber));
-				 startActivity(editNoteIntent);
+				 startActivityForResult(editNoteIntent, 1);
 			}
 			
 		});

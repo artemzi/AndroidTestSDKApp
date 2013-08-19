@@ -26,6 +26,7 @@ public class EditNoteActivity extends Activity {
         setContentView(R.layout.activity_edit_note);
         
         final Button saveButton = (Button)findViewById(R.id.saveButton);
+        final Button cancelButton = (Button)findViewById(R.id.cancelButton);
 		final EditText titleEditText = (EditText)findViewById(R.id.titleEditText);
 		final EditText noteEditText = (EditText)findViewById(R.id.noteEditText);
 		final TextView dateTextView = (TextView)findViewById(R.id.dateValueTextView);
@@ -47,6 +48,15 @@ public class EditNoteActivity extends Activity {
 			noteEditText.setEnabled(false);
 			saveButton.setText("Edit");
 		}
+		
+		cancelButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				setResult(RESULT_CANCELED, new Intent());
+				finish();
+			}
+		});
 		
         saveButton.setOnClickListener(new OnClickListener() {
 			
